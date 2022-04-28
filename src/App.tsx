@@ -3,13 +3,13 @@ import Modal from 'react-modal';
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header/";
 import { NewTransactionModal } from './components/NewTransactionModal';
-import { TransactionsContext, TransactionsProvider } from './TransactionsContext';
+import { TransactionsProvider } from './hooks/useTransactions';
 
 import { GlobalStyle } from "./styles/global";
 
 Modal.setAppElement('#root')
 
-export function App() {
+export function App(): JSX.Element {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
   function handleOpenNewTransactionModal() {
